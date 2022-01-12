@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React, { useState } from 'react';
 
-export default App;
+import firebase from 'firebase/app'
+import 'firebase/firestore';
+import 'firebase/auth';
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import * as privateFirebase from "./privateFirebase";
+firebase.initializeApp(privateFirebase.config);
+
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+
+
+export default function App() {
+    // const [user] = useAuthState(auth);
+    
+    // const [formValue, setFormValue] = useState('');
+    // let id = "Sheridan Thirsk";
+    // const sendMessage = async (msg) => { 
+    //     console.log(msg);
+    // }
+
+    // return (
+    //   <div className="App">
+    //     <header>
+    //       <h3>👥💬{id} on 🔥base</h3>
+    //     </header>
+        
+    //     <form className="message" onSubmit={sendMessage}>
+
+    //     <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="hello to you" />
+
+    //     </form>
+    //     {user ? <div>u</div> : <div>x</div>}
+    //   </div>
+    // );
+    return <div>ST</div>
+  }
